@@ -54,7 +54,7 @@ public class regConfirm extends HttpServlet {
 "            <input type=\"tel\" name=\"mobile\" value=\""+mobile+"\" disabled>\n" +
 "        </p>\n" +
 "\n" +
-"        <p>Confirm Password:\n" +
+"        <p>Password:\n" +
 "            <input type=\"password\" name=\"password\" value=\""+user_password+"\" disabled>\n" +
 "        </p>\n" +
 "\n" +
