@@ -1,0 +1,85 @@
+<html>
+  <head>
+    <style>
+      form {
+        width: 500px;
+        margin: 0 auto;
+        padding: 30px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .form-group input[type="text"], .form-group input[type="number"], .form-group select {
+        padding: 10px;
+        font-size: 16px;
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+
+    
+      input[type="submit"] {
+        width: 120px;
+        height: 40px;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <h2>Money Sending Form</h2>
+      
+      <div class="form-group">
+        <label for="transaction-type">Transaction Type:</label>
+        <select id="transaction-type" name="transaction-type" required>
+          <option value="deposit">UPI ID</option>
+          <option value="withdraw">Bank Transaction</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="receiver-name">Receiver Name:</label>
+        <input type="text" id="receiver-name" name="receiver-name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="receiver-account-number">Receiver Bank Name:</label>
+        <input type="text" id="receiver-account-number" name="receiver-account-number" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="receiver-account-number">Receiver Account Number:</label>
+        <input type="text" id="receiver-account-number" name="receiver-account-number" required>
+      </div>
+     <div class="form-group">
+        <label for="receiver-account-number">Receiver IFSC Number:</label>
+        <input type="text" id="receiver-account-number" name="receiver-account-number" required>
+      </div>
+      
+
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
