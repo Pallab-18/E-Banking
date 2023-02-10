@@ -8,7 +8,7 @@
     <h3>Your Details</h3>
     <form action="#" method="post">
         <p>First Name*:
-            <input type="text" placeholder="Enter First Name" name="first_name">
+            <input type="text" placeholder="Enter First Name" name="first_name" required>
         </p>
 
         <p>Middle Name:
@@ -16,23 +16,23 @@
         </p>
 
         <p>Last Name*:
-            <input type="text" placeholder="Enter First Name" name="last_name">
+            <input type="text" placeholder="Enter First Name" name="last_name" required>
         </p>
 
         <p> Email ID*:
-            <input type="text" placeholder="Enter mail id" name="email_id">
+            <input type="email" placeholder="Enter mail id" name="user_email" required>
         </p>
 
         <p>Mobile No*:
-            <input type="text" placeholder="Phone Number" name="mobile_no">
+            <input type="tel" placeholder="Phone Number" name="mobile" required>
         </p>
 
         <p>Create Password*:
-            <input type="password" name="create_password">
+            <input type="password" name="create_password" required>
         </p>
 
         <p>Confirm Password*:
-            <input type="password" name="confirm_password">
+            <input type="password" name="confirm_password" required>
         </p>
 
         <br>
@@ -40,19 +40,19 @@
         <h3>Your Bank Account Details</h3>
 
         <p>Bank*:
-            <input type="text" name="bank_name">
+            <input type="text" name="bank_name" required>
         </p>
 
         <p>IFSC Code*:
-            <input type="text" name="IFSC_Code">
+            <input type="text" name="IFSC" required>
         </p>
 
         <p>A/C No*:
-            <input type="text" name="A/C No">
+            <input type="text" name="A/C" required>
         </p>
 
         <p>Branch:
-            <input type="text" name="Branch">
+            <input type="text" name="branch">
         </p>
 
         <button type="submit">SUBMIT</button>
