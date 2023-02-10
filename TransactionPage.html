@@ -64,29 +64,38 @@
       <div class="form-group">
         <label for="transaction-type">Transaction Type:</label>
         <select id="transaction-type" name="transaction-type" required>
-          <option value="deposit">UPI ID</option>
-          <option value="withdraw">Bank Transaction</option>
+          <option value="upi">UPI ID</option>
+          <option value="bank_transaction">Bank Transaction</option>
         </select>
-      </div>
-
-      <div class="form-group">
-        <label for="receiver-name">Receiver Name:</label>
-        <input type="text" id="receiver-name" name="receiver-name" required>
-      </div>
-
-      <div class="form-group">
-        <label for="receiver-account-number">Receiver Bank Name:</label>
-        <input type="text" id="receiver-account-number" name="receiver-account-number" required>
       </div>
       
       <div class="form-group">
         <label for="receiver-account-number">Receiver Account Number:</label>
         <input type="text" id="receiver-account-number" name="receiver-account-number" required>
       </div>
+
+      <div class="form-group">
+        <label for="receiver-account-number">Account Type:</label>
+        <select id="receiver-account-type" name="receiver-account-type" required>
+          <option value="savings">Saving Account</option>
+          <option value="current">Current Account</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="receiver-name">Account Holder Name:</label>
+        <input type="text" id="receiver-name" name="receiver-name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="receiver-bank">Receiver Bank:</label>
+        <input type="text" id="receiver-bank" name="receiver-bank" required>
+      </div>
+      
       
      <div class="form-group">
-        <label for="receiver-account-number">Receiver IFSC Number:</label>
-        <input type="text" id="receiver-account-number" name="receiver-account-number" required>
+        <label for="receiver-ifsc">IFSC Code:</label>
+        <input type="text" id="receiver-ifsc" name="receiver-ifsc" required>
       </div>
       
 
