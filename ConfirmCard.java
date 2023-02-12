@@ -7,6 +7,7 @@ public class ConfirmCard extends HttpServlet {
     {
         res.setContentType("text/html");
         PrintWriter pw=res.getWriter();
+        String card_type = req.getParameter("card_type");
         String card_number = req.getParameter("card_number");
         String expiry = req.getParameter("expiry");
         String pin = req.getParameter("pin");
@@ -15,6 +16,7 @@ public class ConfirmCard extends HttpServlet {
          try{
             HttpSession ses=req.getSession();
             
+            ses.setAttribute("card_type",card_type);
             ses.setAttribute("card_number",card_number);
             ses.setAttribute("expiry",expiry);
              ses.setAttribute("Pin",pin);
@@ -29,7 +31,7 @@ public class ConfirmCard extends HttpServlet {
 "      <h2>Money Sending Form</h2>\n" +
 "      <div class=\"form-group\">\n" +
 "        <label for=\"transaction-type\">Card Type:</label>\n" +
-"        <select id=\"transaction-type\" name=\"card_type\" value=\"card_type\" required>\n" +
+"        <select id=\"transaction-type\" name=\"card_type\" value=\""+card_type+"\" required>\n" +
 "          <option value=\"Credit\">Credit Card</option>\n" +
 "          <option value=\"Debit\">Debit Card</option>\n" +
 "        </select>\n" +
@@ -60,8 +62,9 @@ public class ConfirmCard extends HttpServlet {
 "      \n" +
 "      <div class=\"form-group\">\n" +
 "        <label for=\"receiver-bank\">Amount:</label>\n" +
-"        <input type=\"number\" id=\"amaount\" name=\"amount\" value=\""+Amount+"\"disabled >\n" +
+"        <input type=\"number\" id=\"amaount\" name=\"amount\" value=\"amount\" required>\n" +
 "      </div>\n" +
+"      <input type=\"submit\" value=\"Submit\">\n" +
 "    </form>\n" +
 "  </body>\n" +
 "</html>");
