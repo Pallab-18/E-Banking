@@ -21,7 +21,7 @@ public class regConfirm extends HttpServlet {
         String branch = req.getParameter("branch");
          try{
             HttpSession ses=req.getSession();
-            /*
+            
             ses.setAttribute("first_name",first_name);
             ses.setAttribute("middle_name",middle_name);
             ses.setAttribute("last_name",last_name);
@@ -32,7 +32,7 @@ public class regConfirm extends HttpServlet {
             ses.setAttribute("ifsc",ifsc);
             ses.setAttribute("acc",acc);
             ses.setAttribute("branch",branch);//Will have to add more setAttributes for transfering the data to the sql table
-            */
+            
             pw.println("<!DOCTYPE html>\n" +
 "<html lang=\"en\">\n" +
 "<head>\n" +
