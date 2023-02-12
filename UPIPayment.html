@@ -1,0 +1,90 @@
+<html>
+  <head>
+    <style>
+      form {
+        width: 500px;
+        margin: 0 auto;
+        padding: 30px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .form-group input[type="text"], .form-group input[type="number"], .form-group input[type="email"],.form-group select {
+        padding: 10px;
+        font-size: 16px;
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+
+    
+      input[type="submit"] {
+        width: 120px;
+        height: 40px;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+      
+      input[type="reset"] {
+        width: 120px;
+        height: 40px;
+        color: #0e0e0e;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="ConfirmUPI" method="post">
+      <h2>Money Sending Form</h2>
+      <div class="form-group">
+      
+      <div class="form-group">
+        <label for="receiver-account-number">Your VPA:</label>
+        <input type="email" id="card_number" name="yvpa"  required>
+      </div>
+
+
+      <div class="form-group">
+        <label for="receiver-name">Send to VPA:</label>
+        <input type="email" id="receiver-name" name="svpa"  required>
+      </div>
+
+      <div class="form-group">
+        <label for="receiver-bank">Nick Name:</label>
+        <input type="text" id="receiver-bank" name="pin">
+      </div>
+      
+      <div class="form-group">
+        <label for="receiver-bank">Amaount:</label>
+        <input type="number" id="amaount" name="amaount" required>
+      </div>
+
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </form>
+  </body>
+</html>
