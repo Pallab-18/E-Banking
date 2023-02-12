@@ -2,12 +2,12 @@ import java.io.*;
 import javax.servlet.*;//for GenericServlet
 import javax.servlet.http.*;//for HttpServlet
 
-public class Confirmtran extends HttpServlet {
+public class ConfirmTran extends HttpServlet {
  public void doPost(HttpServletRequest req,HttpServletResponse res)throws IOException,ServletException
     {
         res.setContentType("text/html");
         PrintWriter pw=res.getWriter();
-        String Transaction_Type = req.getParameter("transaction_type");
+
         String Receiver_account_number = req.getParameter("receiver_account_number");
         String Receiver_Account_Type = req.getParameter("receiver_account_type");
         String Receiver_Name = req.getParameter("receiver_name");
@@ -16,7 +16,6 @@ public class Confirmtran extends HttpServlet {
          try{
             HttpSession ses=req.getSession();
             
-            ses.setAttribute("transaction_type",Transaction_Type);
             ses.setAttribute("receiver_account_number",Receiver_account_number);
             ses.setAttribute("receiver_account_type",Receiver_Account_Type);
             ses.setAttribute("receiver_name",Receiver_Name);
@@ -27,16 +26,8 @@ public class Confirmtran extends HttpServlet {
 "  <head>\n" +
 "  </head>\n" +
 "  <body>\n" +
-"    <form action=\"\" method=\"post\">\n" +
+"    <form action=\"#\" method=\"post\">\n" +
 "      <h2>Money Sending Form</h2>\n" +
-"      \n" +
-"      <div class=\"form-group\">\n" +
-"        <label for=\"transaction-type\">Transaction Type:</label>\n" +
-"        <select id=\"transaction-type\" name=\"Transaction_type\" value=\""+Transaction_Type+"\" disabled>\n" +
-"          <option value=\"upi\">UPI ID</option>\n" +
-"          <option value=\"bank_transaction\">Bank Transaction</option>\n" +
-"        </select>\n" +
-"      </div>\n" +
 "      \n" +
 "      <div class=\"form-group\">\n" +
 "        <label for=\"receiver-account-number\">Receiver Account Number:</label>\n" +
@@ -64,7 +55,7 @@ public class Confirmtran extends HttpServlet {
 "      \n" +
 "     <div class=\"form-group\">\n" +
 "        <label for=\"receiver-ifsc\">IFSC Code:</label>\n" +
-"        <input type=\"text\" id=\"receiver-ifsc\" name=\"receiver_ifsc\" value=\""+Receiver_IFSC+"\"disabled>\n" +
+"        <input type=\"text\" id=\"receiver-ifsc\" name=\"receiver_ifsc\" value=\""+Receiver_IFSC+"\" disabled>\n" +
 "      </div>\n" +
 "      \n" +
 "      <div class=\"form-group\">\n" +
