@@ -1,65 +1,73 @@
 <html>
+    <head>
+        <title>User Registration</title>
+        <!--<link rel="stylesheet" type="text/css" href="./user_reg_style.css">-->
 
-<head>
-    <title>User Registration</title>
-</head>
+    </head>
+    <body bgcolor="Khaki" style="text-align: center">
 
-<body bgcolor="Khaki" style="text-align: center">
-    <h3>Your Details</h3>
-    <form action="regConfirm" method="post">
-        <p>First Name*:
-            <input type="text" placeholder="Enter First Name" name="first_name" required>
-        </p>
+        
+            <h3>Your Details</h3>
+            <form action="regConfirm" method="post">
 
-        <p>Middle Name:
-            <input type="text" placeholder="Enter First Name" name="middle_name">
-        </p>
+                
+                
+                 <p>First Name*:                   
+                <input type="text" placeholder="Enter First Name" name="first_name"></p> 
+                 
+                 <p>Middle Name:                   
+                <input type="text" placeholder="Enter First Name" name="middle_name"></p> 
+                 
+                 <p>Last Name*:                   
+                <input type="text" placeholder="Enter First Name" name="last_name"></p> 
+                
+              
+                <p> Email ID*:
+                <input type="text" placeholder="Enter mail id" name="user_email"> </p>
+                
+                
+                <p>Mobile No*: 
+                    <input type="text" placeholder="Phone Number" name="mobile"></p>
+                
+                
+                <p>Create Password*:
+                <input type="password" name="create_password"></p>
+                
+               
+                <p>Confirm Password*:
+                <input type="password" name="password"></p>
+                
 
-        <p>Last Name*:
-            <input type="text" placeholder="Enter First Name" name="last_name" required>
-        </p>
+                <br>
+                
 
-        <p> Email ID*:
-            <input type="email" placeholder="Enter mail id" name="user_email" required>
-        </p>
+                <h3>Your Bank Account Details</h3>
 
-        <p>Mobile No*:
-            <input type="tel" placeholder="Phone Number" name="mobile" required>
-        </p>
 
-        <p>Create Password*:
-            <input type="password" name="password" required>
-        </p>
+                <p>Bank*:
+                <input type="text" name="user_bank"></p>
 
-        <p>Confirm Password*:
-            <input type="password" name="confirm_password" required>
-        </p>
 
-        <br>
 
-        <h3>Your Bank Account Details</h3>
+                <p>IFSC Code*:
+                <input type="text" name="ifsc"></p>
 
-        <p>Bank*:
-            <input type="text" name="bank_name" required>
-        </p>
 
-        <p>IFSC Code*:
-            <input type="text" name="ifsc" required>
-        </p>
 
-        <p>A/C No*:
-            <input type="text" name="a/c" required>
-        </p>
+                <p>A/C No*:
+                <input type="text" name="acc"></p>
 
-        <p>Branch:
-            <input type="text" name="branch">
-        </p>
 
-        <button type="submit">SUBMIT</button>
-        <button type="reset">RESET</button>
 
-    </form>
+                <p>Branch:
+                <input type="text" name="branch"></p>
+                
+                <button type="submit">SUBMIT</button>
+                <button type="reset">RESET</button>
 
-</body>
-
+                
+                
+            </form>
+        
+    </body>
 </html>
