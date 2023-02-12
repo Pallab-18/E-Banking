@@ -1,0 +1,103 @@
+<html>
+  <head>
+    <style>
+      form {
+        width: 500px;
+        margin: 0 auto;
+        padding: 30px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .form-group input[type="text"], .form-group input[type="number"],.form-group input[type="date"], .form-group select {
+        padding: 10px;
+        font-size: 16px;
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+
+    
+      input[type="submit"] {
+        width: 120px;
+        height: 40px;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+      
+      input[type="reset"] {
+        width: 120px;
+        height: 40px;
+        color: #0e0e0e;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="ConfirmCard" method="post">
+      <h2>Money Sending Form</h2>
+      <div class="form-group">
+        <label for="transaction-type">Card Type:</label>
+        <select id="transaction-type" name="card_type" required>
+          <option value="Credit">Credit Card</option>
+          <option value="Debit">Debit Card</option>
+        </select>
+      </div>
+      
+      
+      <div class="form-group">
+        <label for="receiver-account-number">Card Number:</label>
+        <input type="number" id="card_number" name="card_number" value="cardnumber" required>
+      </div>
+
+
+      <div class="form-group">
+        <label for="receiver-name">Expiry:</label>
+        <input type="date" id="Expiry" name="expiry" value="expiry" required>
+      </div>
+
+      <div class="form-group">
+        <label for="receiver-name">CVV:</label>
+        <input type="number" id="CVV" name="CVV" value="cvv" required>
+      </div>
+
+
+      <div class="form-group">
+        <label for="receiver-bank">PIN:</label>
+        <input type="number" id="pin" name="pin" value="pin" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="receiver-bank">Amount:</label>
+        <input type="number" id="amaount" name="amaount" value="amount" required>
+      </div>
+
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </form>
+  </body>
+</html>
