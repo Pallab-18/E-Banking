@@ -1,3 +1,4 @@
+
 import java.io.*;
 import javax.servlet.*;//for GenericServlet
 import javax.servlet.http.*;//for HttpServlet
@@ -13,15 +14,24 @@ public class regConfirm extends HttpServlet {
         String user_email = req.getParameter("user_email");
         String mobile = req.getParameter("mobile");
         String user_password = req.getParameter("password");
-        String confirm_password = req.getParameter("confirm_password");
-        String user_bank = req.getParameter("bank_name");
+        //String confirm_password = req.getParameter("confirm_password");
+        String user_bank = req.getParameter("user_bank");
         String ifsc = req.getParameter("ifsc");
-        String acc = req.getParameter("a/c");
+        String acc = req.getParameter("acc");
         String branch = req.getParameter("branch");
          try{
             HttpSession ses=req.getSession();
             
-            ses.setAttribute("first_name",first_name); //Will have to add more setAttributes for transfering the data to the sql table
+            ses.setAttribute("first_name",first_name);
+            ses.setAttribute("middle_name",middle_name);
+            ses.setAttribute("last_name",last_name);
+            ses.setAttribute("user_email",user_email);
+            ses.setAttribute("mobile",mobile);
+            ses.setAttribute("password",user_password);
+            ses.setAttribute("user_bank",user_bank);
+            ses.setAttribute("ifsc",ifsc);
+            ses.setAttribute("acc",acc);
+            ses.setAttribute("branch",branch);//Will have to add more setAttributes for transfering the data to the sql table
             
             pw.println("<!DOCTYPE html>\n" +
 "<html lang=\"en\">\n" +
@@ -33,7 +43,7 @@ public class regConfirm extends HttpServlet {
 "</head>");
             pw.println("<body>\n" +
 "    <h3>Confirm Your Details And Your Bank Details</h3>\n" +
-"    <form action=\"#\" method=\"post\">\n" +
+"    <form action=\"afterRegConfirm\" method=\"post\">\n" +
 "        <p>First Name:\n" +
 "            <input type=\"text\" name=\"first_name\" value=\""+first_name+"\" disabled>\n" +
 "        </p>\n" +
@@ -54,12 +64,13 @@ public class regConfirm extends HttpServlet {
 "            <input type=\"tel\" name=\"mobile\" value=\""+mobile+"\" disabled>\n" +
 "        </p>\n" +
 "\n" +
+"        <p>" +
 "        <p>Password:\n" +
 "            <input type=\"password\" name=\"password\" value=\""+user_password+"\" disabled>\n" +
 "        </p>\n" +
 "\n" +
 "        <p>Bank:\n" +
-"            <input type=\"text\" name=\"bank_name\" value=\""+user_bank+"\" disabled>\n" +
+"            <input type=\"text\" name=\"user_bank\" value=\""+user_bank+"\" disabled>\n" +
 "        </p>\n" +
 "\n" +
 "        <p>IFSC Code:\n" +
@@ -67,7 +78,7 @@ public class regConfirm extends HttpServlet {
 "        </p>\n" +
 "\n" +
 "        <p>A/C No:\n" +
-"            <input type=\"text\" name=\"a/c\" value=\""+acc+"\" disabled>\n" +
+"            <input type=\"text\" name=\"acc\" value=\""+acc+"\" disabled>\n" +
 "        </p>\n" +
 "\n" +
 "        <p>Branch:\n" +
