@@ -9,15 +9,15 @@ public class ConfirmUPI extends HttpServlet {
         PrintWriter pw=res.getWriter();
         String Yvpa = req.getParameter("yvpa");
         String Svpa = req.getParameter("svpa");
-        String Pin = req.getParameter("pin");
-        String Amount = req.getParameter("amount");
+        String Nick = req.getParameter("nick");
+        
          try{
             HttpSession ses=req.getSession();
             
-            ses.setAttribute("yv",Yvpa);
+            ses.setAttribute("yvpa",Yvpa);
             ses.setAttribute("svpa",Svpa);
-            ses.setAttribute("pin",Pin);
-            ses.setAttribute("amount",Amount);
+            ses.setAttribute("nick",Nick);
+        
             
             pw.println("<html>\n" +
 "  <head>\n" +
@@ -40,13 +40,14 @@ public class ConfirmUPI extends HttpServlet {
 "\n" +
 "      <div class=\"form-group\">\n" +
 "        <label for=\"receiver-bank\">Nick Name:</label>\n" +
-"        <input type=\"text\" id=\"receiver-bank\" name=\"pin\" value=\""+Pin+"\" disabled>\n" +
+"        <input type=\"text\" id=\"receiver-bank\" name=\"nick\" value=\""+Nick+"\" disabled>\n" +
 "      </div>\n" +
 "      \n" +
 "      <div class=\"form-group\">\n" +
-"        <label for=\"receiver-bank\">Amount:</label>\n" +
-"        <input type=\"number\" id=\"amaount\" name=\"amaount\" value=\""+Amount+"\" disabled>\n" +
+"        <label for=\"receiver-bank\">Amaount:</label>\n" +
+"        <input type=\"number\" id=\"amaount\" name=\"amaount\" required>\n" +
 "      </div>\n" +
+"      <input type=\"submit\" value=\"Submit\">\n" +
 "    </form>\n" +
 "  </body>\n" +
 "</html>");
