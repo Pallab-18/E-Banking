@@ -3,7 +3,7 @@ import java.io.*;
 import javax.servlet.*;//for GenericServlet
 import javax.servlet.http.*;//for HttpServlet
 
-public class regConfirm extends HttpServlet {
+public class RegConfirm extends HttpServlet {
  public void doPost(HttpServletRequest req,HttpServletResponse res)throws IOException,ServletException
     {
         res.setContentType("text/html");
@@ -43,7 +43,7 @@ public class regConfirm extends HttpServlet {
 "</head>");
             pw.println("<body>\n" +
 "    <h3>Confirm Your Details And Your Bank Details</h3>\n" +
-"    <form action=\"afterRegConfirm\" method=\"post\">\n" +
+"    <form  method=\"POST\" action=\"afterRegConfirm\">\n" +
 "        <p>First Name:\n" +
 "            <input type=\"text\" name=\"first_name\" value=\""+first_name+"\" disabled>\n" +
 "        </p>\n" +

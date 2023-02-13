@@ -5,7 +5,7 @@ import java.sql.Statement;
 import javax.servlet.*;//for GenericServlet
 import javax.servlet.http.*;//for HttpServlet
 
-public class afterRegConfirm extends HttpServlet
+public class AfterRegConfirm extends HttpServlet
 {
     public void doPost(HttpServletRequest req,HttpServletResponse res)throws IOException,ServletException
     {
@@ -32,7 +32,7 @@ public class afterRegConfirm extends HttpServlet
         String branch=(String) ses.getAttribute("branch");
             Class.forName("oracle.jdbc.driver.OracleDriver");
             //registering type4 driver for oracle 
-            Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","SYSTEM","cha2023");
+            Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","system","Hrithik");
             Statement stmt=con.createStatement();
             String q1="insert into app_user values(user_seq.nextval,'"+first_name+"','"+middle_name+"','"+last_name+"','"+user_email+"','"+mobile+"','"+password+"',' "+user_bank+" ' ,'"+ifsc+" ', ' "+acc+" ' ,' "+branch+" ',' "+id_proof+" ' ,' "+uid_no+" ')";
             int x=stmt.executeUpdate(q1);
