@@ -43,7 +43,7 @@ public class RegConfirm extends HttpServlet {
 "</head>");
             pw.println("<body>\n" +
 "    <h3>Confirm Your Details And Your Bank Details</h3>\n" +
-"    <form  method=\"POST\" action=\"afterRegConfirm\">\n" +
+"    <form  method=\"POST\" action=\"AfterRegConfirm\">\n" +
 "        <p>First Name:\n" +
 "            <input type=\"text\" name=\"first_name\" value=\""+first_name+"\" disabled>\n" +
 "        </p>\n" +
