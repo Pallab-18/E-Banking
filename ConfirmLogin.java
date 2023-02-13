@@ -22,7 +22,7 @@ public class ConfirmLogin extends HttpServlet
             Statement stmt=con.createStatement();
             String s="select * from app_user where email='"+login_email+"' and password='"+login_password+"' ";
             ResultSet rs=stmt.executeQuery(s);
-            pw.println(s);
+            //pw.println(s);
             if(rs.next())
             {
              pw.println("Login Successful");
