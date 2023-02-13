@@ -13,7 +13,7 @@ public class regConfirm extends HttpServlet {
         String last_name = req.getParameter("last_name");
         String user_email = req.getParameter("user_email");
         String mobile = req.getParameter("mobile");
-        String user_password = req.getParameter("password");
+        String password = req.getParameter("password");
         String confirm_password = req.getParameter("confirm_password");
         String user_bank = req.getParameter("user_bank");
         String ifsc = req.getParameter("ifsc");
@@ -27,7 +27,7 @@ public class regConfirm extends HttpServlet {
             ses.setAttribute("last_name",last_name);
             ses.setAttribute("user_email",user_email);
             ses.setAttribute("mobile",mobile);
-            ses.setAttribute("password",user_password);
+            ses.setAttribute("password",password);
             ses.setAttribute("user_bank",user_bank);
             ses.setAttribute("ifsc",ifsc);
             ses.setAttribute("acc",acc);
@@ -66,7 +66,7 @@ public class regConfirm extends HttpServlet {
 "\n" +
 "        <p>" +
 "        <p>Password:\n" +
-"            <input type=\"password\" name=\"password\" value=\""+user_password+"\" disabled>\n" +
+"            <input type=\"password\" name=\"password\" value=\""+password+"\" disabled>\n" +
 "        </p>\n" +
 "\n" +
 "        <p>Bank:\n" +
