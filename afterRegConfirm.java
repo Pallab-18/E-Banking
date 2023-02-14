@@ -5,7 +5,7 @@ import java.sql.Statement;
 import javax.servlet.*;//for GenericServlet
 import javax.servlet.http.*;//for HttpServlet
 
-public class AfterRegConfirm extends HttpServlet
+public class afterRegConfirm extends HttpServlet
 {
     public void doPost(HttpServletRequest req,HttpServletResponse res)throws IOException,ServletException
     {
