@@ -54,4 +54,3 @@ public class afterRegConfirm extends HttpServlet
             pw1.println(e);
         }
     }
-}
