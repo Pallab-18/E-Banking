@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>User Registration</title>
-        <!--<link rel="stylesheet" type="text/css" href="./user_reg_style.css">-->
+       
 
     </head>
     <body bgcolor="Khaki" style="text-align: center">
@@ -13,33 +13,33 @@
                 
                 
                  <p>First Name*:                   
-                <input type="text" placeholder="Enter First Name" name="first_name"></p> 
+                <input type="text" placeholder="Enter First Name" name="first_name" required></p> 
                  
                  <p>Middle Name:                   
-                <input type="text" placeholder="Enter First Name" name="middle_name"></p> 
+                <input type="text" placeholder="Enter Middle Name" name="middle_name"></p> 
                  
                  <p>Last Name*:                   
-                <input type="text" placeholder="Enter First Name" name="last_name"></p> 
+                     <input type="text" placeholder="Enter Last Name" name="last_name" required></p> 
                 
               
                 <p> Email ID*:
-                <input type="text" placeholder="Enter mail id" name="user_email"> </p>
+                    <input type="text" placeholder="Enter mail id" name="user_email" required> </p>
                 
                 
                 <p>Mobile No*: 
-                    <input type="tel" placeholder="Phone Number" name="mobile"></p>
+                    <input type="tel" placeholder="Phone Number" name="mobile" required></p>
                 
                 
                 <p>Create Password*:
-                <input type="password" name="password"></p>
+                    <input type="password" name="password" required></p>
                 
                
                 <p>Confirm Password*:
-                <input type="password" name="confirm_password"></p>
+                    <input type="password" name="confirm_password" required></p>
                 
                 
                 <p>Security Question*:
-                 <select name="sec_qns">
+                 <select name="sec_qus">
                  <option value="">--Select a question--</option>
                  <option value="First childhood bestfriend?">First childhood bestfriend?</option>
                  <option value="First pet name?">First pet name?</option>
@@ -50,11 +50,9 @@
                 </p>
                  
                  <p> Answer*:
-                <input type="text" placeholder="Answer" name="answer "> </p>
+                <input type="text" placeholder="Answer" name="answer" required> </p>
                 
                 
-                
-
                 <br>
                 
 
@@ -62,22 +60,22 @@
 
 
                 <p>Bank*:
-                <input type="text" name="user_bank"></p>
+                    <input type="text" name="user_bank" required></p>
 
 
 
                 <p>IFSC Code*:
-                <input type="text" name="ifsc"></p>
+                    <input type="text" name="ifsc" required></p>
 
 
 
                 <p>A/C No*:
-                <input type="text" name="acc"></p>
+                    <input type="text" name="acc" required></p>
 
 
 
                 <p>Branch:
-                <input type="text" name="branch"></p>
+                    <input type="text" name="branch" required></p>
                 
                 <button type="submit">SUBMIT</button>
                 <button type="reset">RESET</button>
