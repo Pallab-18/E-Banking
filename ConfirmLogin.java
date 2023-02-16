@@ -18,27 +18,19 @@ public class ConfirmLogin extends HttpServlet
         {
             Class.forName("oracle.jdbc.driver.OracleDriver");
             //registering type4 driver for oracle 
-            Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","system","Hrithik");
+            Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","PALLAB","cha2023");
             Statement stmt=con.createStatement();
-            String s="select * from app_user where email='"+login_email+"'and password='"+login_password+"' ";
+            String s="select * from app_user where email='"+login_email+"' and password='"+login_password+"' ";
+            String s2="select unique_id from app_user where email='"+login_email+"' ";
             ResultSet rs=stmt.executeQuery(s);
+            ResultSet rs2=stmt.executeQuery(s2);
+            
+           HttpSession ses=req.getSession();
+           String unique_id=(String) ses.getAttribute("unique_id");
             //pw.println(s);
             if(rs.next())
             {
              pw.println("Login Successful");
-             pw.println("<!DOCTYPE html>\n" +
-"<html lang=\"en\">\n" +
-"<head>\n" +
-"    <meta charset=\"UTF-8\">\n" +
-"    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n" +
-"    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n" +
-"    <meta http-equiv=\"refresh\" content=\"3; URL=after_login.html\" />\n" +
-"    <title>redirect</title>\n" +
-"</head>\n" +
-"<body>\n" +
-"    <h2> Login Successful Wait for 3sec</h2>\n" +
-"</body>\n" +
-"</html>");
             }
             else
             {
