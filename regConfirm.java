@@ -14,9 +14,9 @@ public class regConfirm extends HttpServlet {
         String mobile = req.getParameter("mobile");
         String password = req.getParameter("password");
         String confirm_password = req.getParameter("confirm_password");
-        String seq_qus = req.getParameter("seq_qus");
+        String sec_qus = req.getParameter("sec_qus");
         String answer = req.getParameter("answer");
-        String user_bank = req.getParameter("user_bank");
+        String user_bank = req.getParameter("user_bank");                                                                                      
         String ifsc = req.getParameter("ifsc");
         String acc = req.getParameter("acc");
         String branch = req.getParameter("branch");
@@ -29,12 +29,12 @@ public class regConfirm extends HttpServlet {
             ses.setAttribute("user_email",user_email);
             ses.setAttribute("mobile",mobile);
             ses.setAttribute("password",password);
-            ses.setAttribute("seq_qus",seq_qus);
+            ses.setAttribute("sec_qus",sec_qus);
             ses.setAttribute("answer",answer);
             ses.setAttribute("user_bank",user_bank);
             ses.setAttribute("ifsc",ifsc);
             ses.setAttribute("acc",acc);
-            ses.setAttribute("branch",branch);//Will have to add more setAttributes for transfering the data to the sql table
+            ses.setAttribute("branch",branch);      //Will have to add more setAttributes for transfering the data to the sql table
             
             pw.println("<!DOCTYPE html>\n" +
 "<html lang=\"en\">\n" +
@@ -74,7 +74,7 @@ public class regConfirm extends HttpServlet {
 "\n" +
  "        <p>" +
 "        <p>Security Question*:\n" +
-"            <input type=\"text\" name=\"seq_qus\" value=\""+seq_qus+"\" disabled>\n" +
+"            <input type=\"text\" name=\"sec_qus\" value=\""+sec_qus+"\" disabled>\n" +
 "        </p>\n" +
 "        <p>Answer:\n" +
 "            <input type=\"text\" name=\"answer\" value=\""+answer+"\" disabled>\n" +
