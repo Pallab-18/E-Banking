@@ -3,8 +3,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import javax.servlet.*;//for GenericServlet
-import javax.servlet.http.*;//for HttpServlet
+import javax.servlet.*;  //for GenericServlet
+import javax.servlet.http.*;  //for HttpServlet
 
 public class ConfirmLogin extends HttpServlet
 {
@@ -20,17 +20,25 @@ public class ConfirmLogin extends HttpServlet
             //registering type4 driver for oracle 
             Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","PALLAB","cha2023");
             Statement stmt=con.createStatement();
-            String s="select * from app_user where email='"+login_email+"' and password='"+login_password+"' ";
+            String s1="select * from app_user where email='"+login_email+"' and password='"+login_password+"' ";
             String s2="select unique_id from app_user where email='"+login_email+"' ";
-            ResultSet rs=stmt.executeQuery(s);
-            ResultSet rs2=stmt.executeQuery(s2);
+            
+            ResultSet rs2=stmt.executeQuery(s1);
+            ResultSet rs3=stmt.executeQuery(s2);
+            
+            //pw.println(s);
+           // pw.println(s2);
             
            HttpSession ses=req.getSession();
            String unique_id=(String) ses.getAttribute("unique_id");
             //pw.println(s);
-            if(rs.next())
+            if(rs2.next() || rs3.next())
             {
-             pw.println("Login Successful");
+             pw.println("Login Succesful");
+             //pw.println(s1);
+            //pw.println(s2);
+            
+            response.sendRedirect("WelcomePage");
             }
             else
             {
