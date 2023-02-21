@@ -2,7 +2,7 @@ import java.io.*;
 import javax.servlet.*;//for GenericServlet
 import javax.servlet.http.*;//for HttpServlet
 
-public class ConfirmTran extends HttpServlet {
+public class Confirmtran extends HttpServlet {
  public void doPost(HttpServletRequest req,HttpServletResponse res)throws IOException,ServletException
     {
         res.setContentType("text/html");
