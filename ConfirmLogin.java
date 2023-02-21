@@ -1,3 +1,4 @@
+
 import java.io.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -19,7 +20,7 @@ public class ConfirmLogin extends HttpServlet
         {
             Class.forName("oracle.jdbc.driver.OracleDriver");
             //registering type4 driver for oracle 
-            Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","PALLAB","cha2023");
+            Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","HRITHIK","Hrithik");
             Statement stmt=con.createStatement();
             String s1="select * from app_user where email='"+login_email+"' and password='"+login_password+"' ";
             
@@ -33,14 +34,12 @@ public class ConfirmLogin extends HttpServlet
              //pw.println(s1);
             //pw.println(s2);
             String uid=rs1.getString(1);
-           // pw.println(uid);
-            
-            
            HttpSession ses=req.getSession();
            ses.setAttribute("unique_id",uid);
+//           pw.println(uid);
            
             
-            //response.sendRedirect("WelcomePage");
+            res.sendRedirect("WelcomePage");
             
             }
             else

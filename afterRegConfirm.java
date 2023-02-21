@@ -35,7 +35,7 @@ public class afterRegConfirm extends HttpServlet
         String branch=(String) ses.getAttribute("branch");
             Class.forName("oracle.jdbc.driver.OracleDriver");
             //registering type4 driver for oracle 
-            Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","PALLAB","cha2023");
+            Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","HRITHIK","Hrithik");
             Statement stmt=con.createStatement();
             String q1="insert into app_user values(user_seq.nextval,'"+first_name+"','"+middle_name+"','"+last_name+"','"+user_email+"','"+mobile+"','"+password+"',' "+sec_qus+" ' ,' "+answer+" ' ,' "+user_bank+" ' ,'"+ifsc+" ', ' "+acc+" ' ,' "+branch+" ',' "+id_proof+" ' ,' "+uid_no+" ')";
             int x=stmt.executeUpdate(q1);
@@ -69,3 +69,4 @@ public class afterRegConfirm extends HttpServlet
             pw1.println(e);
         }
     }
+}
