@@ -14,6 +14,7 @@ public class ConfirmLogin extends HttpServlet
         PrintWriter pw=res.getWriter();
         String login_email=req.getParameter("login_email");
         String login_password=req.getParameter("login_password");
+        
          try
         {
             Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -21,29 +22,32 @@ public class ConfirmLogin extends HttpServlet
             Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","PALLAB","cha2023");
             Statement stmt=con.createStatement();
             String s1="select * from app_user where email='"+login_email+"' and password='"+login_password+"' ";
-            String s2="select unique_id from app_user where email='"+login_email+"' ";
             
-            ResultSet rs2=stmt.executeQuery(s1);
-            ResultSet rs3=stmt.executeQuery(s2);
             
-            //pw.println(s);
-           // pw.println(s2);
+            ResultSet rs1=stmt.executeQuery(s1);
+           
             
-           HttpSession ses=req.getSession();
-           String unique_id=(String) ses.getAttribute("unique_id");
-            //pw.println(s);
-            if(rs2.next() || rs3.next())
+            if(rs1.next())
             {
              pw.println("Login Succesful");
              //pw.println(s1);
             //pw.println(s2);
+            String uid=rs1.getString(1);
+           // pw.println(uid);
             
-            response.sendRedirect("WelcomePage");
+            
+           HttpSession ses=req.getSession();
+           ses.setAttribute("unique_id",uid);
+           
+            
+            //response.sendRedirect("WelcomePage");
+            
             }
             else
             {
                 pw.println("Login Unsuccesful");
             }
+            
             con.close();
         }
         catch(Exception e)
