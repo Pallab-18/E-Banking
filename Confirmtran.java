@@ -64,7 +64,7 @@ public class Confirmtran extends HttpServlet {
 "      \n" +
 "     <div class=\"form-group\">\n" +
 "        <label for=\"receiver-ifsc\">IFSC Code:</label>\n" +
-"        <input type=\"text\" id=\"receiver-ifsc\" name=\"receiver_ifsc\" value=\""+Receiver_IFSC+"\" required>\n" +
+"        <input type=\"text\" id=\"receiver-ifsc\" name=\"receiver_ifsc\" value=\""+Receiver_IFSC+"\" disabled>\n" +
 "      </div>\n" +
 "      \n" +
 "      <div class=\"form-group\">\n" +
