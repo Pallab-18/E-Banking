@@ -61,6 +61,7 @@
     <form action="ConfirmUPI" method="post">
       <h2>Money Sending Form</h2>
       <div class="form-group">
+          <input name="receiver_account_type" value="UPI Transaction" hidden>
       
       <div class="form-group">
         <label for="receiver-account-number">Your VPA:</label>
@@ -79,8 +80,7 @@
       </div>
       
 
-      <input type="submit" value="Confirm">
-      <input type="reset" value="Reset">
+      <input type="submit" value="Confirm"><input type="reset" value="Reset">
     </form>
   </body>
 </html>

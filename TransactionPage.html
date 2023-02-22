@@ -58,16 +58,10 @@
     </style>
   </head>
   <body>
-    <form action="Confirmtran" method="post">
+    <form action="ConfirmTran" method="post">
       <h2>Money Sending Form</h2>
       
-      <div class="form-group">
-        <label for="receiver-account-number">Transaction Type:</label>
-        <select id="receiver-account-type" name="receiver_account_type" required>
-          <option value="savings">Bank Transaction</option>
-          <option value="current">UPI Transaction</option>
-        </select>
-      </div>
+        <input name="receiver_account_type" value="Bank Transaction" hidden>
 
       <div class="form-group">
         <label for="receiver-account-number">Receiver Account Number:</label>

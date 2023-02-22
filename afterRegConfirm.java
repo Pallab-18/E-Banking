@@ -11,13 +11,10 @@ public class afterRegConfirm extends HttpServlet
     {
         res.setContentType("text/html");
         PrintWriter pw1=res.getWriter();
-        
 
         String id_proof=req.getParameter("id_proof");
         String uid_no=req.getParameter("uid_no");
-        
         //pw1.println("<html><body bgcolor=skyblue>Welcome "+nm+"</body></html>");//response from servlet
-        
          try
         {   
          HttpSession ses=req.getSession();

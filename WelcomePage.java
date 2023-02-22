@@ -16,6 +16,7 @@ public class WelcomePage extends HttpServlet
         {
              HttpSession ses=req.getSession();
            String uid=(String)ses.getAttribute("unique_id");
+           ses.setAttribute("uid",uid);
 //           pw.println(uid);
            
             Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -88,7 +89,7 @@ public class WelcomePage extends HttpServlet
 "        </ul>\n" +
 "    </div>\n" +
 "    <div class=\"main\">\n" +
-"        <h1>Welcome "+rs.getString(2)+"</h1>\n" +
+"        <h1>Welcome "+rs.getString(2)+" &"+rs.getString(1)+"</h1>\n" +
 "        <a href=\"#\">Adding Debit / Credit Card To Your Account</a>\n" +
 "    </div>\n" +
 "</body>\n" +

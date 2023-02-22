@@ -2,7 +2,7 @@ import java.io.*;
 import javax.servlet.*;//for GenericServlet
 import javax.servlet.http.*;//for HttpServlet
 
-public class Confirmtran extends HttpServlet {
+public class ConfirmTran extends HttpServlet {
  public void doPost(HttpServletRequest req,HttpServletResponse res)throws IOException,ServletException
     {
         res.setContentType("text/html");
@@ -15,6 +15,7 @@ public class Confirmtran extends HttpServlet {
         String Receiver_IFSC = req.getParameter("receiver_ifsc");
          try{
             HttpSession ses=req.getSession();
+            String uid=(String)ses.getAttribute("uid");
             
             ses.setAttribute("transaction_type",Transaction_Type);
             ses.setAttribute("receiver_account_number",Receiver_account_number);
@@ -22,6 +23,7 @@ public class Confirmtran extends HttpServlet {
             ses.setAttribute("receiver_name",Receiver_Name);
             ses.setAttribute("receiver_bank",Receiver_Bank);
             ses.setAttribute("receiver_ifsc", Receiver_IFSC);
+            pw.println(uid);
             
             pw.println("<html>\n" +
 "  <head>\n" +
