@@ -40,17 +40,17 @@ public class Confirmtran extends HttpServlet {
 "        <input name=\"mode_of_pay\" value=\"Bank Transaction\" hidden>\n" +
 "      <div class=\"form-group\">\n" +
 "        <label for=\"user_email\">Your Email:</label>\n" +
-"        <input type=\"text\" id=\"receiver_account_number\" name=\"user_email\" value=\""+User_Email+"\" disable>\n" +
+"        <input type=\"text\" id=\"receiver_account_number\" name=\"user_email\" value=\""+user_email+"\" disable>\n" +
 "      </div>\n" +
 "\n" +
 "      <div class=\"form-group\">\n" +
 "        <label for=\"receiver-account-number\">Receiver Account Number:</label>\n" +
-"        <input type=\"text\" id=\"receiver_account_number\" name=\"receiver_account_number\" value=\""+Receiver_account_number+"\" disable>\n" +
+"        <input type=\"text\" id=\"receiver_account_number\" name=\"receiver_account_number\" value=\""+receiver_account_number+"\" disable>\n" +
 "      </div>\n" +
 "\n" +
 "      <div class=\"form-group\">\n" +
 "        <label for=\"receiver-account-number\">Account Type:</label>\n" +
-"        <select id=\"receiver-account-type\" name=\"receiver_account_type\" value=\""+Receiver_Account_Type+"\" disable>\n" +
+"        <select id=\"receiver-account-type\" name=\"receiver_account_type\" value=\""+receiver_account_type+"\" disable>\n" +
 "          <option value=\"savings\">Saving Account</option>\n" +
 "          <option value=\"current\">Current Account</option>\n" +
 "        </select>\n" +
@@ -58,18 +58,18 @@ public class Confirmtran extends HttpServlet {
 "\n" +
 "      <div class=\"form-group\">\n" +
 "        <label for=\"receiver-name\">Account Holder Name:</label>\n" +
-"        <input type=\"text\" id=\"receiver-name\" name=\"receiver_name\" value=\""+Receiver_Name+"\" disable>\n" +
+"        <input type=\"text\" id=\"receiver-name\" name=\"receiver_name\" value=\""+receiver_name+"\" disable>\n" +
 "      </div>\n" +
 "\n" +
 "      <div class=\"form-group\">\n" +
 "        <label for=\"receiver-bank\">Receiver Bank:</label>\n" +
-"        <input type=\"text\" id=\"receiver-bank\" name=\"receiver_bank\" value=\""+Receiver_Bank+"\" disable>\n" +
+"        <input type=\"text\" id=\"receiver-bank\" name=\"receiver_bank\" value=\""+receiver_bank+"\" disable>\n" +
 "      </div>\n" +
 "      \n" +
 "      \n" +
 "     <div class=\"form-group\">\n" +
 "        <label for=\"receiver-ifsc\">IFSC Code:</label>\n" +
-"        <input type=\"text\" id=\"receiver-ifsc\" name=\"receiver_ifsc\" value=\""+Receiver_IFSC+"\" disable>\n" +
+"        <input type=\"text\" id=\"receiver-ifsc\" name=\"receiver_ifsc\" value=\""+receiver_ifsc+"\" disable>\n" +
 "      </div>\n" +
 "      \n" +
 "      <div class=\"form-group\">\n" +
