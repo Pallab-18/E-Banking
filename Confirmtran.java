@@ -7,23 +7,23 @@ public class Confirmtran extends HttpServlet {
     {
         res.setContentType("text/html");
         PrintWriter pw=res.getWriter();
-        String Transaction_Type = req.getParameter("transaction_type");
-        String Receiver_account_number = req.getParameter("receiver_account_number");
-        String Receiver_Account_Type = req.getParameter("receiver_account_type");
-        String Receiver_Name = req.getParameter("receiver_name");
-        String Receiver_Bank = req.getParameter("receiver_bank");
-        String Receiver_IFSC = req.getParameter("receiver_ifsc");
-        String User_Email= req.getParameter("user_email");
+        String transaction_type = req.getParameter("transaction_type");
+        String receiver_account_number = req.getParameter("receiver_account_number");
+        String receiver_account_type = req.getParameter("receiver_account_type");
+        String receiver_name = req.getParameter("receiver_name");
+        String receiver_bank = req.getParameter("receiver_bank");
+        String receiver_ifsc = req.getParameter("receiver_ifsc");
+        String user_email= req.getParameter("user_email");
          try{
             HttpSession ses=req.getSession();
             
-            ses.setAttribute("transaction_type",Transaction_Type);
-            ses.setAttribute("receiver_account_number",Receiver_account_number);
-            ses.setAttribute("receiver_account_type",Receiver_Account_Type);
-            ses.setAttribute("receiver_name",Receiver_Name);
-            ses.setAttribute("receiver_bank",Receiver_Bank);
-            ses.setAttribute("receiver_ifsc", Receiver_IFSC);
-            ses.setAttribute("user_email",User_Email);
+            ses.setAttribute("transaction_type",transaction_type);
+            ses.setAttribute("receiver_account_number",receiver_account_number);
+            ses.setAttribute("receiver_account_type",receiver_account_type);
+            ses.setAttribute("receiver_name",receiver_name);
+            ses.setAttribute("receiver_bank",receiver_bank);
+            ses.setAttribute("receiver_ifsc", receiver_ifsc);
+            ses.setAttribute("user_email",user_email);
             
             pw.println("<!DOCTYPE html>\n" +
 "<html lang=\"en\">\n" +
