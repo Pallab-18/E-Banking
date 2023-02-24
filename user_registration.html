@@ -1,65 +1,89 @@
 <html>
     <head>
         <title>User Registration</title>
-       <style>
-        form {
-  max-width: 500px;
-  margin: 0 auto;
+        <style>
+          body {
+  font-family: Arial, sans-serif;
+  background-color: #84DCC6;
+  text-align: center;
+}
+
+form {
+  margin: 20px auto;
+  width: 400px;
+  border: 1px solid #ccc;
   padding: 20px;
+  background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  background-color: #f9f9f9;
 }
 
 h3 {
   font-size: 24px;
-  font-weight: bold;
   margin-bottom: 20px;
+  color: #333;
 }
 
 input[type="text"],
-input[type="password"],
 input[type="tel"],
+input[type="password"],
 select {
   width: 100%;
-  padding: 12px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: none;
-  border-bottom: 2px solid #ccc;
-  transition: border-color 0.2s;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   font-size: 16px;
 }
 
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="tel"]:focus,
-select:focus {
-  outline: none;
-  border-bottom-color: #1e90ff;
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #999;
 }
 
 button[type="submit"],
 button[type="reset"] {
-  display: inline-block;
+  display: block;
+  width: 100%;
+  padding: 10px;
   margin-top: 20px;
-  padding: 12px 24px;
   border: none;
   border-radius: 5px;
-  background-color: #1e90ff;
-  color: #fff;
   font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #00BFFF;
   cursor: pointer;
-  transition: background-color 0.2s;
 }
 
 button[type="submit"]:hover,
 button[type="reset"]:hover {
-  background-color: #0077b6;
+  background-color: #0080FF;
 }
 
-       </style>
+p {
+  text-align: left;
+  margin: 10px;
+  font-size: 16px;
+}
 
+input[type="text"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="password"]::placeholder {
+  color: #999;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #00BFFF;
+}
+
+        </style>
     </head>
     <body bgcolor="#84DCC6" style="text-align: center">
 
