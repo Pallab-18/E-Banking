@@ -18,23 +18,28 @@ public class UPIPayInsert extends HttpServlet {
         try {
             HttpSession ses = req.getSession();
             String rev_name = (String) ses.getAttribute("receiver_name");
-            String pay_mode = (String) ses.getAttribute("transaction_type");
-            String user_email = (String) ses.getAttribute("user_email");
             String yvpa=(String) ses.getAttribute("yvpa");
-            String svpa=(String) ses.getAttribute("svpa");
+            String svpa= (String) ses.getAttribute("svpa");
+            String user_email = (String) ses.getAttribute("user_email");
 
             Class.forName("oracle.jdbc.driver.OracleDriver");
             // registering type4 driver for oracle
-            Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "RICK", "123456789");
+            Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "HRITHIK", "Hrithik");
             Statement stmt = con.createStatement();
             String q1 = "select UNIQUE_ID from APP_USER where EMAIL='" + user_email + "'";
             ResultSet rs = stmt.executeQuery(q1);
+//            pw.println(q1);
+            
 
             if (rs.next()) {
                 String uid = rs.getString("UNIQUE_ID");
-               String q2 = "insert into transaction_table values(TRAN_ID.nextval, '" + uid + "', '" + pay_mode + "', '', null, null, '"+rev_name +"', null, null, '"+yvpa+"','"+svpa+"')";
+                int unid = Integer. parseInt(uid);
+//                 pw.println(uid);
+                String q2 = "insert into transaction_table values(TRAN_ID.nextval, '"+unid+"', '" + "',null  ,null, null '" + rev_name + "',null  ,null '"
+                        + "', '"+yvpa+"','"+svpa+"')";
+//                pw.println(unid);
+                pw.println(q2);
                 int rowsInserted = stmt.executeUpdate(q2);
-
                 if (rowsInserted > 0) {
                     pw.println("Transaction Successful");
                     pw.println(uid);
@@ -44,6 +49,7 @@ public class UPIPayInsert extends HttpServlet {
             } else {
                 pw.println("User not found");
             }
+
             con.close();
         } catch (ClassNotFoundException | SQLException e) {
             pw.println(e);
