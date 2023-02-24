@@ -10,11 +10,11 @@
 	margin: 0;
 	padding: 0;
 	font-family: sans-serif;
-  background-color:#84DCC6;
+  background:linear-gradient(#6dd5ed,#2193b0);
 }
 
 header {
-	background-color: #333;
+	background: linear-gradient(black, #2f5b8b);
 	color: #fff;
 }
 .navbar {
@@ -23,7 +23,7 @@ header {
   align-items: center;
   height: 60px;
   padding: 0 20px;
-  background-color: #136F63;
+  background: linear-gradient(black, #2f5b8b);
 }
 
 nav {
@@ -46,7 +46,7 @@ nav ul li {
 nav ul li a {
 	display: block;
 	padding: 1em;
-	color:#00072D;
+	color: linear-gradient(black, #2f5b8b);;
 	text-decoration: none;
 }
 
@@ -108,7 +108,7 @@ p {
   text-align: left;
 }
 footer {
-  background-color: #136F63;
+  background:  linear-gradient(black, #2f5b8b);
   color: #fff;
   padding: 50px 0;
   display: flex;
@@ -172,20 +172,38 @@ footer {
   margin-bottom: 5px;
   font-size: 15px;
 }
-
 .image-container {
-    width: 800px;
-    height: 300px;
-    overflow-x: scroll;
-    white-space: nowrap;
-  }
-  
-  .image-container img {
-    width: 770px;
-    height: 300px;
-    display: inline-block;
-  }
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
+}
 
+nav ul li a:hover {
+  background-color: #386ba2a0; 
+  color: #fff; 
+}
+
+.image-container img {
+  width: 65%;
+  height: auto;
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.button-container {
+  background:linear-gradient(black, #2f5b8b) ;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.button-container button {
+  color:linear-gradient(black, #2f5b8b) ;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
 
     </style>
   </head>
@@ -204,8 +222,8 @@ footer {
           </li>
           <li><a href="#">Transaction</a>
             <ul>
-              <li><a href="TransactionPage.html">Bank & UPI Transaction</a></li>
-              <li><a href="CardPayment.html">Card Transaction</a></li>
+              <li><div class="button-container"><a href="TransactionPage.html"><button type="button">Bank & UPI Transaction</button></a></div></li>
+              <li><div class="button-container"><a href="CardPayment.html"><button type="button">Card Transaction</button></a></div></li>
             </ul>
           </li>
           <li><a href="login.html">Log In</a>
@@ -224,11 +242,13 @@ footer {
       </div>
     <div class="text-box">
       <h1>Founding Principles</h1>
+      <ul>
       <li class="h">To transform the financial institution not only as the financial heart of the community but the social heart as well</li>
       <li class="h">To work with sense of service and dedication. </li>
       <li class="h">To assist the needy</li>
       <li class="h">To inculcate the habit of thrift and savings</li>
       <li class="h">To make changes/remove hardships and sufferings.Enabling customers to have safe and fast access to their bank accounts</li>
+    </ul>
     </div>
     <div class="container">
       <p>Customers are requested to call on our
@@ -242,7 +262,7 @@ footer {
         <p>Toll Free Number:- +91 111222333</p>
         </div>
         
-        <div class="image-container">
+    <div class="image-container">
     <img class="image1" src="img1.jpg">
     <img class="image2" src="img2.jpg">
     <img class="image3" src="img3.png">
@@ -264,7 +284,7 @@ footer {
             <div class="name">Pallab Chatterjee</div>
           </div>
           <div class="profile">
-            <div class="image" style="background-image: url('Subhrajit.jpeg');"></div>
+            <div class="image" style="background-image: url('Subhrajit (3).jpeg');"></div>
             <div class="name">Subhrajit Mukherjee</div>
           </div>
         </div>
