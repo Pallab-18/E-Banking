@@ -13,7 +13,6 @@ public class SaveTran extends HttpServlet {
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
         res.setContentType("text/html");
         PrintWriter pw = res.getWriter();
-
         String amount = req.getParameter("amount");
         try {
             HttpSession ses = req.getSession();
@@ -40,8 +39,90 @@ public class SaveTran extends HttpServlet {
                 int rowsInserted = stmt.executeUpdate(q2);
 
                 if (rowsInserted > 0) {
-                    pw.println("Transaction Successful");
-                    pw.println(uid);
+                    pw.println("<!DOCTYPE html>\n" +
+"<html lang=\"en\">\n" +
+"<head>\n" +
+"    <meta charset=\"UTF-8\">\n" +
+"    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n" +
+"    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n" +
+"    <title>Document</title>\n" +
+"    <style>\n" +
+"        .receipt {\n" +
+"  width: 500px;\n" +
+"  margin: 0 auto;\n" +
+"  border: 1px solid #ccc;\n" +
+"  padding: 20px;\n" +
+"}\n" +
+"\n" +
+".transaction {\n" +
+"  text-align: center;\n" +
+"}\n" +
+"\n" +
+".transaction h2 {\n" +
+"  margin-top: 0;\n" +
+"}\n" +
+"\n" +
+".qr-code {\n" +
+"  display: flex;\n" +
+"  justify-content: center;\n" +
+"  align-items: center;\n" +
+"  margin: 20px 0;\n" +
+"}\n" +
+"\n" +
+".qr-code img {\n" +
+"  width: 100px;\n" +
+"  height: 100px;\n" +
+"}\n" +
+".sender-receiver {\n" +
+"  display: flex;\n" +
+"  justify-content: space-between;\n" +
+"  margin-top: 20px;\n" +
+"}\n" +
+"\n" +
+".sender, .receiver {\n" +
+"  flex-basis: 48%;\n" +
+"}\n" +
+"\n" +
+".sender h2, .receiver h2 {\n" +
+"  margin-top: 0;\n" +
+"}\n" +
+"\n" +
+"    </style>\n" +
+"</head>\n" +
+"<body>\n" +
+"    <div class=\"receipt\">\n" +
+"        <div class=\"transaction\">\n" +
+"          <h2>Transaction Details</h2>\n" +
+"          <p><strong>Transaction ID:</strong> 123456789</p>\n" +
+"          <p><strong>Amount:</strong> $100.00</p>\n" +
+"          <p><strong>Date & Time:</strong> 22 Feb 2023 20:00:00 IST</p>\n" +
+"          <div class=\"qr-code\">\n" +
+"            <img src=\"qr.png\" alt=\"QR Code\">\n" +
+"          </div>\n" +
+"        </div>\n" +
+"        <div class=\"sender-receiver\">\n" +
+"          <div class=\"sender\">\n" +
+"            <h2>Sender Details</h2>\n" +
+"            <p><strong>Name:</strong> Subhrajit Mukherjee</p>\n" +
+"            <p><strong>Bank Name:</strong> XYZ Bank</p>\n" +
+"            <p><strong>IFSC Code:</strong> XYZ123456</p>\n" +
+"            <p><strong>Account Number:</strong> 1234567890</p>\n" +
+"            <p><strong>Transaction Type:</strong> Bank Transaction</p>\n" +
+"          </div>\n" +
+"          <div class=\"receiver\">\n" +
+"            <h2>Receiver Details</h2>\n" +
+"            <p><strong>Name:</strong> Elon Musk</p>\n" +
+"            <p><strong>Bank Name:</strong> ABC Bank</p>\n" +
+"            <p><strong>IFSC Code:</strong> ABC123456</p>\n" +
+"            <p><strong>Account Number:</strong> 0987654321</p>\n" +
+"            <p><strong>Type of Account:</strong> Savings</p>\n" +
+"          </div>\n" +
+"        </div>\n" +
+"      </div>\n" +
+"      \n" +
+"</body>\n" +
+"</html>");
+                   // pw.println("");
                 } else {
                     pw.println("Transaction unsuccessful");
                 }
