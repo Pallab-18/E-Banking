@@ -18,7 +18,7 @@ body {
   -moz-font-feature-settings: "liga" on; }
 
 .row {
-  background-color: linear-gradient(#6dd5ed,#2193b0);
+  background-color: rgba(20, 120, 200, 0.6);
   color: #fff;
   text-align: center;
   padding: 2em 2em 0.5em;
@@ -100,13 +100,15 @@ body {
 	<title>Forgot Password</title>
 </head>
 <body>
+    <form action="" method="">
 	<div class="row">
 		<h1>Forgot Password</h1>
 		<h6 class="information-text">Enter your registered email to reset your password.</h6>
 		<div class="form-group">
 			<input type="email" name="user_email" id="user_email">
 			<p><label for="username">Email</label></p>
-			<button onclick="showSpinner()">Reset Password</button>
+			<!--<button onclick="showSpinner()">Reset Password</button>-->
+                                                      <input type="submit" value="Reset Password">
 		</div>
 		<div class="footer">
 			<h5>New here? <a href="#">Sign Up.</a></h5>
@@ -114,4 +116,5 @@ body {
                         <p class="information-text"><span class="symbols" title="Lots of love from me to YOU!"></span><a href="https://www.facebook.com/adedokunyinka.enoch" target="_blank" title="Connect with me on Facebook"><h3>Lets Pay</h3></a></p>
 		</div>
 	</div>
+        </form>
 </body>
