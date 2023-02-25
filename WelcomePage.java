@@ -84,7 +84,7 @@ public class WelcomePage extends HttpServlet
 "        top: 100%;\n" +
 "        background-color: #2f5b8b;\n" +
 "        box-shadow: 3px 2px 20px 1px #111111ed;\n" +
-"        border-radius: 4px;\n" +
+"        border-radius: 6px;\n" +
 "      }\n" +
 "\n" +
 "      .navbar a {\n" +
@@ -95,6 +95,7 @@ public class WelcomePage extends HttpServlet
 "      }\n" +
 "      .navbar a:hover {\n" +
 "        background-color: #3777bc;\n" +
+"        border-radius: 6px;\n" +
 "      }\n" +
 "      ul li:hover > ul {\n" +
 "        display: block;\n" +
@@ -106,7 +107,7 @@ public class WelcomePage extends HttpServlet
 "\n" +
 "      main {\n" +
 "	max-width: 800px;\n" +
-"	margin: 4em auto;\n" +
+"	margin: 6em auto;\n" +
 "	text-align: center;\n" +
 "}\n" +
 "  a{\n" +

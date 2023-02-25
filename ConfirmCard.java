@@ -23,6 +23,8 @@ public class ConfirmCard extends HttpServlet {
             ses.setAttribute("CVV",CVV);
             ses.setAttribute("amount",Amount);
             
+           String uid=(String)ses.getAttribute("unique_id");
+           ses.setAttribute("uid",uid);
             pw.println("<html>\n" +
 "  <head>\n" +
 "  </head>\n" +
@@ -32,8 +34,6 @@ public class ConfirmCard extends HttpServlet {
 "      <div class=\"form-group\">\n" +
 "        <label for=\"transaction-type\">Card Type:</label>\n" +
 "        <select id=\"transaction-type\" name=\"card_type\" value=\""+card_type+"\" required>\n" +
-"          <option value=\"Credit\">Credit Card</option>\n" +
-"          <option value=\"Debit\">Debit Card</option>\n" +
 "        </select>\n" +
 "      </div>\n" +
 "      \n" +
@@ -62,7 +62,7 @@ public class ConfirmCard extends HttpServlet {
 "      \n" +
 "      <div class=\"form-group\">\n" +
 "        <label for=\"receiver-bank\">Amount:</label>\n" +
-"        <input type=\"number\" id=\"amaount\" name=\"amount\" value=\"amount\" required>\n" +
+"        <input type=\"number\" id=\"amaount\" name=\"amount\" value=\"\" required>\n" +
 "      </div>\n" +
 "      <input type=\"submit\" value=\"Submit\">\n" +
 "    </form>\n" +

@@ -27,7 +27,7 @@ public class ConfirmLogin extends HttpServlet
             
             ResultSet rs1=stmt.executeQuery(s1);
            
-            
+
             if(rs1.next())
             {
              pw.println("Login Succesful");
@@ -38,7 +38,6 @@ public class ConfirmLogin extends HttpServlet
            ses.setAttribute("unique_id",uid);
 //           pw.println(uid);
            
-            
             res.sendRedirect("WelcomePage");
             
             }

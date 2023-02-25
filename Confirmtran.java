@@ -2,12 +2,12 @@ import java.io.*;
 import javax.servlet.*;//for GenericServlet
 import javax.servlet.http.*;//for HttpServlet
 
-public class Confirmtran extends HttpServlet {
+public class ConfirmTran extends HttpServlet {
  public void doPost(HttpServletRequest req,HttpServletResponse res)throws IOException,ServletException
     {
         res.setContentType("text/html");
         PrintWriter pw=res.getWriter();
-        String transaction_type = req.getParameter("transaction_type");
+        String transaction_type = req.getParameter("mode_of_pay");
         String receiver_account_number = req.getParameter("receiver_account_number");
         String receiver_account_type = req.getParameter("receiver_account_type");
         String receiver_name = req.getParameter("receiver_name");
@@ -34,7 +34,7 @@ public class Confirmtran extends HttpServlet {
 "    <title>Document</title>\n" +
 "</head>\n" +
 "<body>\n" +
-"    <form action=\"SaveTran\" method=\"post\">\n" +
+"    <form action=\"SaveTran1\" method=\"post\">\n" +
 "      <h2>Money Sending Form</h2>\n" +
 "      \n" +
 "        <input name=\"mode_of_pay\" value=\"Bank Transaction\" hidden>\n" +

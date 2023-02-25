@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body{
+  background: linear-gradient(white,#2e555e);
+  height: 92vh;
+}
+
+.receipt {
+  width: 500px;
+  margin: 50px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(#6dd5edd1, white);
+  box-shadow: 5px 5px 10px black;
+}
+
+.transaction{
+  display: flex;
+    justify-content: space-between;
+}
+
+.transaction h2 {
+  margin-top: 0;
+}
+
+.qr-code {
+  border: 1px solid black;
+    width: 110px;
+    height: 110px;
+  margin: 20px 0;
+}
+
+.qr-code img {
+  width: 110px;
+    height: 110px;
+}
+.sender-receiver {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+}
+
+.sender, .receiver {
+  flex-basis: 48%;
+  padding: 0 20px;
+}
+
+.sender h2, .receiver h2 {
+  margin-top: 0;
+}
+
+    </style>
+</head>
+<body>
+    <div class="receipt">
+      <h2 style="margin-bottom: 0px;">Transaction Details</h2>
+      <hr color="black" width="100%">
+        <div style="width: 100%">
+          <p class="transaction"><span><strong>Transaction ID:</strong> 123456789</span>
+            <span><strong>Date & Time:</strong> 22 Feb 2023 20:00:00 IST</span></p>
+          <p class="transaction"><span><strong>Amount:</strong> ₹ 100.00</span>
+            <span><strong>Transaction Type:</strong> Bank Transaction</span></p>
+        </div>
+          
+          <div class="qr-code">
+            <img src="qr-code.svg" alt="QR Code">
+          </div>
+        <div class="sender-receiver">
+          <div class="sender">
+            <h2>Sender Details</h2>
+            <p><strong>Name:</strong> Subhrajit Mukherjee</p>
+            <p><strong>Email:</strong>Xyz@abc.com</p>
+            <p><strong>Account No.:</strong> 1234567890</p>
+            <p><strong>Bank Name:</strong> XYZ Bank</p>
+            <p><strong>IFSC Code:</strong> XYZ123456</p>
+          </div>
+          <div class="receiver">
+            <h2>Receiver Details</h2>
+            <p><strong>Name:</strong> Elon Musk</p>
+            <p><strong>Account Type:</strong> Savings</p>
+            <p><strong>Account No.:</strong> 0987654321</p>
+            <p><strong>Bank Name:</strong> ABC Bank</p>
+            <p><strong>IFSC Code:</strong> ABC123456</p>
+          </div>
+        </div>
+      </div>
+      
+</body>
+</html>

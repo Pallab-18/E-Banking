@@ -63,31 +63,37 @@
       <div class="form-group">
         <label for="transaction-type">Card Type:</label>
         <select id="transaction-type" name="card_type" required>
+          <option value=""></option>
           <option value="Credit">Credit Card</option>
           <option value="Debit">Debit Card</option>
         </select>
       </div>
       
       
+       <div class="form-group">
+        <label for="card_number">Card Number:</label>
+        <input type="number" id="card_number" name="card_number" required>
+      </div>
+      
       <div class="form-group">
-        <label for="receiver-account-number">Card Number:</label>
-        <input type="number" id="card_number" name="card_number" value="cardnumber" required>
+        <label for="card_holder_name">Card Holder Name:</label>
+        <input type="number" id="card_number" name="card_holder_name" required>
       </div>
 
 
       <div class="form-group">
-        <label for="receiver-name">Expiry:</label>
-        <input type="date" id="Expiry" name="expiry" value="expiry" required>
+        <label for="exp">Expiry:</label>
+        <input type="date" id="Expiry" name="exp" required>
       </div>
 
       <div class="form-group">
-        <label for="receiver-name">cvv:</label>
-        <input type="number" id="CVV" name="CVV" value="cvv" required>
+        <label for="cvv">CVV:</label>
+        <input type="password" id="CVV" name="cvv" required>
       </div>
 
       <div class="form-group">
-        <label for="receiver-bank">PIN:</label>
-        <input type="number" id="pin" name="pin" value="pin" required>
+        <label for="pin">PIN:</label>
+        <input type="password" id="pin" name="pin" required>
       </div>
 
       <input type="submit" value="confirm">
