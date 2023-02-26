@@ -41,7 +41,7 @@ public class SaveTran1 extends HttpServlet {
                 String sacc = rs3.getString(12);
                 String sbank = rs3.getString(10);
                 String sifsc = rs3.getString(11);
-                
+
                 ResultSet rs2 = stmt1.executeQuery("SELECT TRAN_ID.NEXTVAL FROM dual");
                     if(rs2.next()){
                   int tid= rs2.getInt(1);    
@@ -149,7 +149,6 @@ public class SaveTran1 extends HttpServlet {
 "      \n" +
 "</body>\n" +
 "</html>");
-
                 } else {
                     pw.println("Transaction Unsuccessful");
                 }

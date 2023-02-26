@@ -21,14 +21,13 @@ public class WelcomePage extends HttpServlet
            
             Class.forName("oracle.jdbc.driver.OracleDriver");
             //registering type4 driver for oracle 
-            Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","PALLAB","cha2023");
+            Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","HRITHIK","Hrithik");
             Statement stmt=con.createStatement();
             String s="select * from app_user where unique_id='"+uid+"'";
              ResultSet rs=stmt.executeQuery(s);
 //            pw.println(s);
             if(rs.next())
             {
-             pw.println("Login Successful "+rs.getString(2));
              pw.println("<!DOCTYPE html>\n" +
 "<html lang=\"en\">\n" +
 "  <head>\n" +
@@ -36,7 +35,6 @@ public class WelcomePage extends HttpServlet
 "    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />\n" +
 "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n" +
 "    <title>Welcome page</title>\n" +
-"    <!--<link rel=\"stylesheet\" href=\"after_login.css\">-->\n" +
 "    <style>\n" +
 "      * {\n" +
 "        margin: 0px;\n" +
