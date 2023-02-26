@@ -21,7 +21,7 @@ public class WelcomePage extends HttpServlet
            
             Class.forName("oracle.jdbc.driver.OracleDriver");
             //registering type4 driver for oracle 
-            Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","HRITHIK","Hrithik");
+            Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","PALLAB","cha2023");
             Statement stmt=con.createStatement();
             String s="select * from app_user where unique_id='"+uid+"'";
              ResultSet rs=stmt.executeQuery(s);
@@ -232,7 +232,7 @@ public class WelcomePage extends HttpServlet
 "        <li><a href=\"#\">Loan Offer</a></li>\n" +
 "        <li><a href=\"#\">Insurance</a></li>\n" +
 "        <li><a href=\"user_registration.html\">Registration</a></li>\n" +
-"        <li><a href=\"login.html\">Log In</a></li>\n" +
+"        <li><a href=\"index.html\">Sign Out</a></li>\n" +
 "      </ul>\n" +
 "    </div>\n" +
 "    <main>\n" +
