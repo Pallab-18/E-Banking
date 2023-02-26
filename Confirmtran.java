@@ -16,7 +16,7 @@ public class ConfirmTran extends HttpServlet {
         String user_email= req.getParameter("user_email");
          try{
             HttpSession ses=req.getSession();
-            
+
             ses.setAttribute("transaction_type",transaction_type);
             ses.setAttribute("receiver_account_number",receiver_account_number);
             ses.setAttribute("receiver_account_type",receiver_account_type);
@@ -24,7 +24,7 @@ public class ConfirmTran extends HttpServlet {
             ses.setAttribute("receiver_bank",receiver_bank);
             ses.setAttribute("receiver_ifsc", receiver_ifsc);
             ses.setAttribute("user_email",user_email);
-            
+
             pw.println("<!DOCTYPE html>\n" +
 "<html lang=\"en\">\n" +
 "<head>\n" +

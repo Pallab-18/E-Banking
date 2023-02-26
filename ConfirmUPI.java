@@ -47,7 +47,7 @@ public class ConfirmUPI extends HttpServlet {
 "        <label for=\"receiver-bank\">Amaount:</label>\n" +
 "        <input type=\"number\" id=\"amaount\" name=\"amaount\" required>\n" +
 "      </div>\n" +
-"      <input type=\"submit\" value=\"Submit\">\n" +
+"      <input type=\"submit\" value=\"Confirm\">\n" +
 "    </form>\n" +
 "  </body>\n" +
 "</html>");
