@@ -18,12 +18,12 @@ public class AdminLogin extends HttpServlet
         {
             Class.forName("oracle.jdbc.driver.OracleDriver");
             //registering type4 driver of oracle
-            Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","HRITHIK","Hrithik");
+            Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","system","ujala02");
             Statement stmt = con.createStatement();
             String s1 = "select * from Admin1 where ADMIN_ID='"+nm1+"' and ADMIN_PWD='"+nm2+"'";
-            ResultSet rst = stmt.executeQuery(s1);
+            ResultSet rs = stmt.executeQuery(s1);
 //            pw.println(s1);
-            if (rst.next()) {
+            if (rs.next()) {
                 pw.println("login successful");
             } 
             else {
